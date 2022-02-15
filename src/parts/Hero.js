@@ -16,7 +16,7 @@ export default function Hero(props) {
   return (
     <section className="container pt-4">
       <div className="row align-item-center">
-        <div className="col-auto pr-5">
+        <div className="col-sm-12 col-md-6 mb-5">
           {/* style={{ width: 530 }} */}
           <h1 className="h2 font-weight-bold line-height-1 mb-3">
             Forget Busy Work,
@@ -78,12 +78,19 @@ export default function Hero(props) {
             </div>
           </div>
         </div>
-        <div className="col-6 pl-5">
-          <div className="image-hero">
+        <div className="col-sm-12 col-md-6 mt-3">
+          <div style={{ height: 370 }}>
             <img
               src={ImageHero}
               alt="Room with couches"
               className="img-fluid position-absolute"
+              style={{ margin: '-30px 0 0 -30px', zIndex: 1 }}
+            />
+            <img
+              src={ImageHero_}
+              alt="Room with couches frame"
+              className="img-fluid position-absolute"
+              style={{ margin: '0 -15px -15px 0' }}
             />
           </div>
         </div>
