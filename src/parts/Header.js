@@ -13,7 +13,7 @@ export default function Header(props) {
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <BrandIcon />
         <button
-          class="navbar-toggler"
+          class="navbar-toggler ml-auto"
           type="button"
           data-toggle="collapse"
           data-target="#navbarSupportedContent"

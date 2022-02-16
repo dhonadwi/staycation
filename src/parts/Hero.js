@@ -5,6 +5,7 @@ import IconCities from 'assets/images/icons/icon-cities.png';
 import IconTraveller from 'assets/images/icons/icon-traveller.png';
 import IconTreasure from 'assets/images/icons/icon-treasure.png';
 import Button from 'elements/Button';
+import numberFormat from 'utils/formatNumbering';
 
 export default function Hero(props) {
   function showMostPicked() {
@@ -13,10 +14,11 @@ export default function Hero(props) {
       behavior: 'smooth',
     });
   }
+
   return (
     <section className="container pt-4">
       <div className="row align-item-center">
-        <div className="col-sm-12 col-md-6 mb-5">
+        <div className="col-sm-12 col-md-6 mb-5 mx-auto">
           {/* style={{ width: 530 }} */}
           <h1 className="h2 font-weight-bold line-height-1 mb-3">
             Forget Busy Work,
@@ -44,7 +46,7 @@ export default function Hero(props) {
                 alt={`${props.data.travelers} Travellers`}
               />
               <h6 className="mt-3">
-                {props.data.travelers}{' '}
+                {numberFormat(props.data.travelers)}{' '}
                 <span className="text-gray-500 font-weight-light">
                   Travellers
                 </span>
@@ -58,7 +60,7 @@ export default function Hero(props) {
                 alt={`${props.data.treasures} Treasures`}
               />
               <h6 className="mt-3">
-                {props.data.treasures}{' '}
+                {numberFormat(props.data.treasures)}{' '}
                 <span className="text-gray-500 font-weight-light">
                   Treasures
                 </span>
@@ -72,27 +74,26 @@ export default function Hero(props) {
                 alt={`${props.data.cities} Cities`}
               />
               <h6 className="mt-3">
-                {props.data.cities}{' '}
+                {numberFormat(props.data.cities)}{' '}
                 <span className="text-gray-500 font-weight-light">Cities</span>
               </h6>
             </div>
           </div>
         </div>
-        <div className="col-sm-12 col-md-6 mt-3">
-          <div style={{ height: 370 }}>
-            <img
-              src={ImageHero}
-              alt="Room with couches"
-              className="img-fluid position-absolute"
-              style={{ margin: '-30px 0 0 -30px', zIndex: 1 }}
-            />
-            <img
-              src={ImageHero_}
-              alt="Room with couches frame"
-              className="img-fluid position-absolute"
-              style={{ margin: '0 -15px -15px 0' }}
-            />
-          </div>
+        <div className="col-sm-12 col-md-6 mt-3 mx-auto">
+          <img
+            src={ImageHero}
+            alt="Room with couches"
+            style={{ width: '100%' }}
+            // className="img-fluid mb-2"
+            // style={{ margin: '-30px 0 0 -30px', zIndex: 1 }}
+          />
+          {/* <img
+                src={ImageHero_}
+                alt="Room with couches frame"
+                className="img-fluid"
+                style={{ margin: '0 -15px -15px 0' }}
+              /> */}
         </div>
       </div>
     </section>

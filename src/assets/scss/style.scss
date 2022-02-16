@@ -72,6 +72,7 @@ header {
                 }
                 a {
                     &.nav-link {
+                        width: 100%;
                         letter-spacing: 1px;
                         color: $gray-900;
                         padding-left: 1rem;
