@@ -6,12 +6,12 @@
   },
   "mostPicked": [
     {
-      "_id": "asd1293uasdads1",
-      "name": "Jung Hook Sie",
+      "_id": "bg1",
+      "name": "Baros Gateway",
       "type": "Apartment",
       "imageUrl": "/images/image-mostpicked-1.jpg",
-      "country": "South Korea",
-      "city": "Seoul Flore",
+      "country": "Cimahi",
+      "city": "Baros",
       "price": "80",
       "unit": "night"
     },

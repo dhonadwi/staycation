@@ -5,15 +5,14 @@ import BrandIcon from './IconText';
 
 export default function Header(props) {
   const getNavlinkClass = (path) => {
-    console.log(path);
     return props.location.pathname === path ? ' active' : '';
   };
   return (
     <header className="spacing-sm">
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <nav className="navbar navbar-expand-lg navbar-light bg-light">
         <BrandIcon />
         <button
-          class="navbar-toggler ml-auto"
+          className="navbar-toggler ml-auto"
           type="button"
           data-toggle="collapse"
           data-target="#navbarSupportedContent"
@@ -21,11 +20,11 @@ export default function Header(props) {
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <span class="navbar-toggler-icon"></span>
+          <span className="navbar-toggler-icon"></span>
         </button>
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ml-auto">
+        <div className="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul className="navbar-nav ml-auto">
             <li className={`nav-item${getNavlinkClass('/')}`}>
               <Button className="nav-link" type="link" href="">
                 Home

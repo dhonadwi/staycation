@@ -1,6 +1,6 @@
 import React from 'react';
 import ImageHero from 'assets/images/img-hero.jpg';
-import ImageHero_ from 'assets/images/img-hero-frame.jpg';
+// import ImageHero_ from 'assets/images/img-hero-frame.jpg';
 import IconCities from 'assets/images/icons/icon-cities.png';
 import IconTraveller from 'assets/images/icons/icon-traveller.png';
 import IconTreasure from 'assets/images/icons/icon-treasure.png';
