@@ -15,7 +15,7 @@ class TestInput extends Component {
     return (
       <InputNumber
         max={30}
-        onchange={this.handleChange}
+        onChange={this.handleChange}
         name="value"
         value={this.state.value}
       />
@@ -38,4 +38,11 @@ test('should be able to change value', () => {
   fireEvent.change(input, { target: { value: '23' } });
   console.log(input.value);
   expect(input.value).toBe('23');
+});
+
+test('Should not be able to change when reach max value', () => {
+  const { input } = setup();
+
+  fireEvent.change(input, { target: { value: 33 } });
+  expect(input.value).toBe('');
 });

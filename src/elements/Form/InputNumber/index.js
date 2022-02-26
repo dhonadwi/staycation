@@ -3,7 +3,8 @@ import propTypes from 'prop-types';
 import './index.scss';
 
 export default function Number(props) {
-  const { value, placeholder, name, min, max, prefix, suffix } = props;
+  const { value, placeholder, name, min, max, prefix, suffix, isSuffixPlural } =
+    props;
 
   const [InputValue, setInputValue] = useState(`${prefix}${value}${suffix}`);
 
@@ -22,7 +23,9 @@ export default function Number(props) {
           value: +value,
         },
       });
-      setInputValue(`${prefix}${value}${suffix}`);
+      setInputValue(
+        `${prefix}${value}${suffix}${isSuffixPlural && value > 1 ? 's' : ''}`
+      );
     }
   };
 
@@ -62,7 +65,7 @@ export default function Number(props) {
           className="form-control"
           placeholder={placeholder ? placeholder : '0'}
           value={String(InputValue)}
-          onchange={onChange}
+          onChange={onChange}
         />
         <div className="input-group-append">
           <span className="input-group-text plus" onClick={plus}>
@@ -84,6 +87,7 @@ Number.defaultProps = {
 Number.propTypes = {
   value: propTypes.oneOf([propTypes.number, propTypes.string]),
   placeholder: propTypes.string,
-  onchange: propTypes.func,
+  onChange: propTypes.func,
   outerClassname: propTypes.string,
+  isSuffixPlural: propTypes.bool,
 };
