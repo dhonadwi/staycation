@@ -3,7 +3,7 @@ import Breadcrumb from 'elements/Breadcrumb';
 
 export default function PageDetailTitle({ data, breadcrumb }) {
   return (
-    <section className="container spacing-sm">
+    <section className="container spacing-sm mt-3">
       <div className="row align-items-center justify-content-between mb-4">
         <div className="col">
           <Breadcrumb data={breadcrumb} clasName="text-gray-200" />
